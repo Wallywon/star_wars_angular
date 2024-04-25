@@ -1,0 +1,18 @@
+<div class="container">
+  <h1 class="title">Star Wars Planets</h1>
+  <div *ngIf="loading">
+    <p>Loading...</p>
+  </div>
+  <div class="cards-row" *ngIf="!loading">
+    <div *ngFor="let planete of planete" class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ planete.name }}</h5>
+        <p class="card-text">Type of terrain: {{ planete.terrain }}</p>
+        <p class="card-text">Population: {{ planete.population }}</p>
+        <a class="nav-link" [routerLink]="['/people', getPlanetId(planete.url)]">Residents</a>
+      </div>
+    </div>
+  </div>
+  <button class="nav-link" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+  <button class="nav-link" (click)="nextPage()">Next</button>
+  </div>

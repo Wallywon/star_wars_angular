@@ -1,0 +1,3 @@
+1. on affiche les planètes
+2. On affiche le détail de la planete par un clique 
+3.On peut voir une liste de résidents sur la planète et afficher les détails de chaque résident
